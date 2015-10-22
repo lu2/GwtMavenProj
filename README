@@ -1,0 +1,7 @@
+# GwtMavenProj
+GWT + Maven basic Eclipse project (created via webAppCreator -templates maven,sample -out GwtMavenProj
+com.cerlite.gwtmavenproj)
+
+To run app in SuperDevMode:
+$ mvn war:exploded
+$ mvn gwt:run
