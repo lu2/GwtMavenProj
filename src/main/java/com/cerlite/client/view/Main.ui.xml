@@ -1,0 +1,16 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+    xmlns:p="urn:import:com.vaadin.polymer.paper.widget"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+	
+	</ui:style>
+	
+	
+	<g:HTMLPanel>
+	    <p:PaperTextarea ui:field="textarea1"></p:PaperTextarea>
+	    <p:PaperTextarea ui:field="textarea2"></p:PaperTextarea>
+	</g:HTMLPanel>
+	
+	
+</ui:UiBinder> 
