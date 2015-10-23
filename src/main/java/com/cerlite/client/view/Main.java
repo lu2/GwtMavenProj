@@ -8,6 +8,10 @@ import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
 import com.google.gwt.user.client.ui.HasWidgets;
 import com.google.gwt.user.client.ui.Widget;
+import com.vaadin.polymer.elemental.Event;
+import com.vaadin.polymer.elemental.EventListener;
+import com.vaadin.polymer.paper.element.PaperButtonElement;
+import com.vaadin.polymer.paper.element.PaperTextareaElement;
 import com.vaadin.polymer.paper.widget.PaperButton;
 import com.vaadin.polymer.paper.widget.PaperTextarea;
 
@@ -25,12 +29,12 @@ public class Main {
 	HasWidgets content;
 	
 	@UiField 
-	PaperTextarea textarea1;
+	PaperTextareaElement textarea1;
 	@UiField 
-	PaperTextarea textarea2;
+	PaperTextareaElement textarea2;
 	
 	@UiField
-	PaperButton button1;
+	PaperButtonElement button1;
 
 	public Main(gwtmavenproj gwtmavenproj) {
 		widget = uiBinder.createAndBindUi(this);
@@ -40,10 +44,10 @@ public class Main {
 		textarea2.setValue("testvalue2");
 		textarea2.setLabel("testlabel2");
 		
-		button1.addClickHandler(new ClickHandler() {
+		button1.addEventListener("click", new EventListener() {
 			
 			@Override
-			public void onClick(ClickEvent event) {
+			public void handleEvent(Event event) {
 				parent.clicked();
 			}
 		});
