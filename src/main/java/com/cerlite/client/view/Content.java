@@ -1,40 +1,32 @@
 package com.cerlite.client.view;
 
-import com.cerlite.client.gwtmavenproj;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
-import com.google.gwt.user.client.ui.HasWidgets;
 import com.google.gwt.user.client.ui.Widget;
 import com.vaadin.polymer.paper.widget.PaperButton;
 import com.vaadin.polymer.paper.widget.PaperTextarea;
 
-public class Main {
+public class Content {
 
 	private static MainUiBinder uiBinder = GWT.create(MainUiBinder.class);
 
-	interface MainUiBinder extends UiBinder<Widget, Main> {
+	interface MainUiBinder extends UiBinder<Widget, Content> {
 	}
 	
 	private final Widget widget;
-	private final gwtmavenproj parent;
-	
-	@UiField
-	HasWidgets content;
 	
 	@UiField 
 	PaperTextarea textarea1;
 	@UiField 
 	PaperTextarea textarea2;
-	
 	@UiField
 	PaperButton button1;
 
-	public Main(gwtmavenproj gwtmavenproj) {
+	public Content() {
 		widget = uiBinder.createAndBindUi(this);
-		parent = gwtmavenproj;
 		textarea1.setValue("testvalue");
 		textarea1.setLabel("testlabel");
 		textarea2.setValue("testvalue2");
@@ -44,7 +36,8 @@ public class Main {
 			
 			@Override
 			public void onClick(ClickEvent event) {
-				parent.clicked();
+				setLabel1("clickedLabel");
+				setValue1("clickedValue");
 			}
 		});
 	}
@@ -53,8 +46,20 @@ public class Main {
 		return widget;
 	}
 	
-	public HasWidgets getChildContent() {
-		return content;
+	public void setLabel1(String label) {
+		textarea1.setLabel(label);
+	}
+	
+	public void setValue1(String value) {
+		textarea1.setValue(value);
+	}
+	
+	public void setLabel2(String label) {
+		textarea2.setLabel(label);
+	}
+	
+	public void setValue2(String value) {
+		textarea2.setValue(value);
 	}
 
 }

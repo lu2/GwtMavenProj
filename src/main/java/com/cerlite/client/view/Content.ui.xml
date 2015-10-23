@@ -10,9 +10,8 @@
 	<g:HTMLPanel>
 	    <p:PaperTextarea ui:field="textarea1"></p:PaperTextarea>
 	    <p:PaperTextarea ui:field="textarea2"></p:PaperTextarea>
-	    <p:PaperButton ui:field="button1">button1</p:PaperButton>
 	    
-	    <g:HTMLPanel ui:field="content" />
+	    <p:PaperButton ui:field="button1">button1</p:PaperButton>
 	</g:HTMLPanel>
 	
 	
