@@ -1,5 +1,6 @@
 <!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
 <ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+    xmlns:p="urn:import:com.vaadin.polymer.paper.widget"
 	xmlns:g="urn:import:com.google.gwt.user.client.ui">
 	<ui:style>
 	
@@ -7,11 +8,8 @@
 	
 	
 	<g:HTMLPanel>
-	    <paper-textarea ui:field="textarea1"></paper-textarea>
-	    <paper-textarea ui:field="textarea2"></paper-textarea>
-	    <paper-button ui:field="button1">button1</paper-button>
-	    
-	    <g:HTMLPanel ui:field="content" />
+	    <p:PaperTextarea ui:field="textareaWidget"></p:PaperTextarea>
+	    <paper-textarea ui:field="textareaElement"></paper-textarea>
 	</g:HTMLPanel>
 	
 	
